@@ -42,7 +42,11 @@
     }
   ],
   "outbounds": [{
-    "protocol": "freedom"
+    "protocol": "freedom",
+    "settings": {
+               "domainStrategy": "UseIPv4"
+      }
+
   }],
   "routing": {
     "rules": [{
