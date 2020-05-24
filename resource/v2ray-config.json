@@ -93,7 +93,7 @@
     // Node id on your SSR Panel
     "nodeId": node_Id,
     // every N seconds
-    "checkRate": 300,
+    "checkRate": 150,
     // user config
     "user": {
       // inbound tag, which inbound you would like add user to
