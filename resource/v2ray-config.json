@@ -88,8 +88,8 @@
   "policy": {
     "levels": {
       "0": {
-        "statsUserUplink": false,
-        "statsUserDownlink": false
+        "statsUserUplink": true,
+        "statsUserDownlink": true
       }
     },
     "system": {
