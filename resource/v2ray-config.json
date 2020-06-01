@@ -58,9 +58,9 @@
     }
   ],
  "outbounds": [{
+   "sendThrough": "0.0.0.0",
     "protocol": "freedom",
-     "settings": {
-               "domainStrategy": "UseIPv4"
+     "settings": {             
       }},
   {
       "protocol": "blackhole",
