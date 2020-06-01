@@ -44,6 +44,15 @@
         "network": "ws",
         "wsSettings": {
           "path": "/forward_Path"
+        },
+        "security": "tls", 
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/data/v2ray.crt", 
+              "keyFile": "/data/v2ray.key" 
+            }
+          ]
         }
       }
     }
@@ -79,13 +88,13 @@
   "policy": {
     "levels": {
       "0": {
-        "statsUserUplink": true,
-        "statsUserDownlink": true
+        "statsUserUplink": false,
+        "statsUserDownlink": false
       }
     },
     "system": {
-      "statsInboundUplink": true,
-      "statsInboundDownlink": true
+      "statsInboundUplink": false,
+      "statsInboundDownlink": false
     }
   },
 
@@ -93,7 +102,7 @@
     // Node id on your SSR Panel
     "nodeId": node_Id,
     // every N seconds
-    "checkRate": 150,
+    "checkRate": 200,
     // user config
     "user": {
       // inbound tag, which inbound you would like add user to
