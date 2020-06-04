@@ -38,15 +38,12 @@
         "clients": [],
         "disableInsecureEncryption": false,
         "default": {
-          "level": 0,
+          "level": 1,
           "alterId": 4
         }
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/game"
-        }
+        "network": "tcp"
       }
     }
   ],
