@@ -23,6 +23,13 @@
       "tag": "api"
     },
     {
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
       "tag": "proxy",
       "listen": "127.0.0.1",
       "port": 10086,
@@ -32,7 +39,7 @@
         "disableInsecureEncryption": false,
         "default": {
           "level": 0,
-          "alterId": 16
+          "alterId": 4
         }
       },
       "streamSettings": {
@@ -43,22 +50,33 @@
       }
     }
   ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
+ "outbounds": [{
+   "sendThrough": "0.0.0.0",
+    "protocol": "freedom",
+     "settings": {
+      }},
+  {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "block"
     }
   ],
-  "routing": {
-    "rules": [
-      {
-        "inboundTag": [
-          "api"
-        ],
-        "outboundTag": "api",
-        "type": "field"
+ "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [{
+      "type": "field",
+      "inboundTag": [ "api" ],
+      "outboundTag": "api"
+},
+    {
+        "type": "field",
+        "outboundTag": "block",
+        "protocol": [
+          "bittorrent"
+        ]
       }
-    ]
+    ],
+    "strategy": "rules"
   },
   "policy": {
     "levels": {
