@@ -44,7 +44,16 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-        "": "/8cef1e71"
+        "path": "/8cef1e71"
+        },
+         "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/data/v2ray.crt",
+              "keyFile": "/data/v2ray.key"
+            }
+          ]
         }
       }
     }
