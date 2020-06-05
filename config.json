@@ -50,7 +50,7 @@
     }
   ],
  "outbounds": [{
-   "sendThrough":"45.79.91.123",
+   "sendThrough":"0.0.0.0",
     "protocol": "freedom",
      "settings": {
       }},
