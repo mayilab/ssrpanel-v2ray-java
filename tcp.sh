@@ -612,6 +612,7 @@ check_status(){
 			run_status=`bash /appex/bin/lotServer.sh status | grep "LotServer" | awk  '{print $3}'`
 			if [[ ${run_status} = "running!" ]]; then
 				run_status="启动成功"
+				exit 1
 			else 
 				run_status="启动失败"
 			fi
@@ -624,6 +625,7 @@ check_status(){
 			run_status=`lsmod | grep "bbr" | awk '{print $1}'`
 			if [[ ${run_status} == "tcp_bbr" ]]; then
 				run_status="BBR启动成功"
+				exit 1
 			else 
 				run_status="BBR启动失败"
 			fi
@@ -631,6 +633,7 @@ check_status(){
 			run_status=`lsmod | grep "tsunami" | awk '{print $1}'`
 			if [[ ${run_status} == "tcp_tsunami" ]]; then
 				run_status="BBR魔改版启动成功"
+				exit 1
 			else 
 				run_status="BBR魔改版启动失败"
 			fi
@@ -638,6 +641,7 @@ check_status(){
 			run_status=`lsmod | grep "nanqinlang" | awk '{print $1}'`
 			if [[ ${run_status} == "tcp_nanqinlang" ]]; then
 				run_status="暴力BBR魔改版启动成功"
+				exit 1
 			else 
 				run_status="暴力BBR魔改版启动失败"
 			fi
@@ -650,6 +654,7 @@ check_status(){
 			run_status=`lsmod | grep "bbrplus" | awk '{print $1}'`
 			if [[ ${run_status} == "tcp_bbrplus" ]]; then
 				run_status="BBRplus启动成功"
+				exit 1
 			else 
 				run_status="BBRplus启动失败"
 			fi
@@ -663,5 +668,6 @@ check_status(){
 check_sys
 check_version
 [[ ${release} != "debian" ]] && [[ ${release} != "ubuntu" ]] && [[ ${release} != "centos" ]] && echo -e "${Error} 本脚本不支持当前系统 ${release} !" && exit 1
+check_status
 start_menu
 
