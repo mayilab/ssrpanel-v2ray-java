@@ -43,23 +43,14 @@
       },
       "streamSettings": {
         "network": "ws",
-          "wsSettings": {
-          "path": ""
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "certificates": [
-            {
-              "certificateFile": "/data/v2ray.crt",
-              "keyFile": "/data/v2ray.key"
-            }
-          ]
+        "wsSettings": {
+        "": "/8cef1e71"
         }
       }
     }
   ],
  "outbounds": [{
-   "sendThrough": "0.0.0.0",
+   "sendThrough":"45.79.91.123",
     "protocol": "freedom",
      "settings": {
       }},
