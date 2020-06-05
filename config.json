@@ -31,7 +31,6 @@
         ]
       },
       "tag": "proxy",
-      "listen": "127.0.0.1",
       "port": 443,
       "protocol": "vmess",
       "settings": {
@@ -43,7 +42,10 @@
         }
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "ws",
+          "wsSettings": {
+          "path": ""
+        },
         "security": "tls",
         "tlsSettings": {
           "certificates": [
