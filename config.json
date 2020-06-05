@@ -32,7 +32,7 @@
       },
       "tag": "proxy",
       "listen": "127.0.0.1",
-      "port": 10086,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [],
@@ -43,7 +43,16 @@
         }
       },
       "streamSettings": {
-        "network": "tcp"
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/data/v2ray.crt",
+              "keyFile": "/data/v2ray.key"
+            }
+          ]
+        }
       }
     }
   ],
