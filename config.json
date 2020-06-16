@@ -31,8 +31,7 @@
         ]
       },
       "tag": "proxy",
-      "listen": "127.0.0.1",
-      "port": 10086,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [],
@@ -45,13 +44,22 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-        "path": "/8cef1e71"
+        "path":"8cef1e71"
+        },
+         "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/data/v2ray.crt",
+              "keyFile": "/data/v2ray.key"
+            }
+          ]
         }
       }
     }
   ],
  "outbounds": [{
-   "sendThrough":"0.0.0.0",
+   "sendThrough":"66.175.217.226",
     "protocol": "freedom",
      "settings": {
       }},
