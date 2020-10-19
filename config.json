@@ -40,7 +40,10 @@
         }
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "ws",
+        "wsSettings": {
+        "path":"8cef1e719f"
+        },
          "security": "tls",
         "tlsSettings": {
           "certificates": [
