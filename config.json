@@ -57,10 +57,15 @@
     }
   ],
  "outbounds": [{
-   "sendThrough":"66.175.217.226",
     "protocol": "freedom",
      "settings": {
       }},
+               {
+      "tag": "ipv4",
+     "sendThrough":"66.175.217.226",
+      "protocol": "freedom",
+      "settings": {}
+    },
   {
       "protocol": "blackhole",
       "settings": {},
@@ -80,6 +85,13 @@
         "protocol": [
           "bittorrent"
         ]
+      },
+              {
+        "type": "field",
+        "domain": [
+          "domain:google.com"
+        ],
+        "outboundTag": "ipv4"
       }
     ],
     "strategy": "rules"
