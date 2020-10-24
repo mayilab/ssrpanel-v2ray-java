@@ -89,7 +89,7 @@
               {
         "type": "field",
         "domain": [
-          "domain:google.com"
+          "geosite:google"
         ],
         "outboundTag": "ipv4"
       }
