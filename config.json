@@ -29,7 +29,8 @@
         ]
       },
       "tag": "proxy",
-      "port": 443,
+       "listen": "127.0.0.1",
+      "port": 10086,
       "protocol": "vmess",
       "settings": {
         "clients": [],
@@ -43,15 +44,6 @@
         "network": "ws",
         "wsSettings": {
         "path":"8cef1e719f"
-        },
-         "security": "tls",
-        "tlsSettings": {
-          "certificates": [
-            {
-              "certificateFile": "/data/v2ray.crt",
-              "keyFile": "/data/v2ray.key"
-            }
-          ]
         }
       }
     }
