@@ -1,6 +1,6 @@
-fake_Domain:10086 {
+fake_Domain {
   root /srv/www
-  tls user_Name@gmail.com
+  tls off
   gzip
   timeouts none
 }
