@@ -1,10 +1,6 @@
-fake_Domain {
+fake_Domain:10086 {
   root /srv/www
   tls user_Name@gmail.com
   gzip
   timeouts none
-  proxy /forward_Path 127.0.0.1:v2ray_Port {
-    websocket
-    header_upstream -Origin
-  }
 }
