@@ -1,4 +1,4 @@
-fake_Domain {
+fake_Domain:80 {
   root /srv/www
   tls off
   gzip
